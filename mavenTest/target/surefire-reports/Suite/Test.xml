@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite hostname="LAPTOP-VASHFMJO" name="mavenTest.FirstClass" tests="3" failures="0" timestamp="17 Dec 2018 18:29:38 GMT" time="7.19" errors="0">
+  <testcase name="openBrowser" time="7.18" classname="mavenTest.FirstClass"/>
+  <testcase name="show" time="0.002" classname="mavenTest.seconds"/>
+  <testcase name="closebrowser" time="0.001" classname="mavenTest.FirstClass"/>
+</testsuite>
