@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestPackages.jobTracker">
+      <class name="TestPackages.JavaExamples">
         <methods>
-          <include name="ImportExcelFile"/>
+          <include name="Books"/>
         </methods>
-      </class> <!-- TestPackages.jobTracker -->
+      </class> <!-- TestPackages.JavaExamples -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
