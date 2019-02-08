@@ -40,14 +40,14 @@ public class mpt {
 			int browser = input.nextInt();
 				if(browser==1){
 				//create firefox instance
-					System.setProperty("webdriver.gecko.driver", "C://Users//shailesh.jadhav//eclipse-workspace//Projects//DriversExecutebleFiles//geckodriver.exe");
+					System.setProperty("webdriver.gecko.driver", "C://Users//shailesh.jadhav//git//MegaProject//Projects//DriversExecutebleFiles//geckodriver.exe");
 					driver = new FirefoxDriver();
 					
 				}
 				//Check if parameter passed as 'chrome'
 				else if(browser==2){
 					//set path to chromedriver.exe
-					System.setProperty("webdriver.chrome.driver","C://Users//shailesh.jadhav//eclipse-workspace//Projects//DriversExecutebleFiles//chromedriver.exe");
+					System.setProperty("webdriver.chrome.driver","C://Users//shailesh.jadhav//git//MegaProject//Projects//DriversExecutebleFiles//chromedriver.exe");
 					//create chrome instance
 					driver = new ChromeDriver();
 				}

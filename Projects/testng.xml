@@ -3,6 +3,11 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
+      <class name="chromeDemo.ExtetntReportDemo"/>
+      <class name="TestPackages.jobTracker"/>
+      <class name="TestPackages.UITestingClass"/>
+      <class name="TestPackages.JavaExamples"/>
+      <class name="TestPackages.NewTestClass"/>
       <class name="TestPackages.mpt"/>
     </classes>
   </test> <!-- Test -->

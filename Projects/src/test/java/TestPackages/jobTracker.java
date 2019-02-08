@@ -51,7 +51,7 @@ public class jobTracker {
 		
 	}
 	
-	System.out.println("************************New repeated ******"+count +"********* number of times");   
+	System.out.println("************************New repeated ****** "+count +" *********number of times");   
 	}	 
 	
 	mpt Mp = new mpt();
@@ -102,7 +102,7 @@ public class jobTracker {
 //	System.out.println("**************Enter Search Value : ");
 //	String SearchValue = input.nextLine();
 	Thread.sleep(5000);
-	SearchValue("2232320");
+	SearchValue("2213232");
 	Thread.sleep(3000);
 	Mp.driver.findElement(By.xpath("//input[contains(@class,'filter_submit fl')]")).click();
 	Thread.sleep(6000);
