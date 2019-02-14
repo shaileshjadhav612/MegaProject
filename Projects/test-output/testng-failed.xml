@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestPackages.JavaExamples">
+      <class name="TestPackages.checkForColor">
         <methods>
-          <include name="Books"/>
+          <include name="CountNew"/>
         </methods>
-      </class> <!-- TestPackages.JavaExamples -->
+      </class> <!-- TestPackages.checkForColor -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -51,7 +51,7 @@ public class jobTracker {
 		
 	}
 	
-	System.out.println("************************New repeated ****** "+count +" *********number of times");   
+	System.out.println("**New repeated ** "+count +" **number of times");   
 	}	 
 	
 	mpt Mp = new mpt();
