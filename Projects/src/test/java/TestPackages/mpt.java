@@ -40,14 +40,14 @@ public class mpt {
 			int browser = input.nextInt();
 				if(browser==1){
 				//create firefox instance
-					System.setProperty("webdriver.gecko.driver", "C://Users//shailesh.jadhav//git//MegaProject//Projects//DriversExecutebleFiles//geckodriver.exe");
+					System.setProperty("webdriver.gecko.driver", "./DriversExecutebleFiles//geckodriver.exe");
 					driver = new FirefoxDriver();
 					
 				}
 				//Check if parameter passed as 'chrome'
 				else if(browser==2){
 					//set path to chromedriver.exe
-					System.setProperty("webdriver.chrome.driver","C://Users//shailesh.jadhav//git//MegaProject//Projects//DriversExecutebleFiles//chromedriver.exe");
+					System.setProperty("webdriver.chrome.driver","./DriversExecutebleFiles//chromedriver.exe");
 					//create chrome instance
 					driver = new ChromeDriver();
 				}
@@ -72,7 +72,7 @@ public class mpt {
 	 public void checkBooks() throws Exception
 	 {
 		 
-		
+		 SoftAssert sf = new SoftAssert();
 		 setup();
 		 driver.get("https://testing-mpt.realitypremedia.co.in/?lang=en");
 		 String tile=driver.getTitle();
@@ -91,7 +91,7 @@ public class mpt {
 //		WebElement checkbox = driver.findElement(By.xpath("(//ul[contains(@id,'left_filter_genre')]//div//li//input)[1]"));
 //		checkbox.click();
 //	  System.out.println("**********************"+checkbox);
-		Assert.assertEquals(itoms, "80 ITEMS FOUND");
+           sf.assertEquals(itoms, "82 ITEMS FOUND");
 		Thread.sleep(3000);
 		
 		List<WebElement> options = driver.findElements(By.xpath("//ul[contains(@id,'left_filter_genre')]//div//li//input[contains(@class,'filters_value')]"));
@@ -109,7 +109,7 @@ public class mpt {
 				option.click();
 				Thread.sleep(6000);
 				System.out.println("***********************"+item.getText());
-				Assert.assertEquals(item.getText(), "1 ITEMS FOUND");
+				sf.assertEquals(item.getText(), "2 ITEMS FOUND");
 				option.click();
 		
 			}
@@ -121,15 +121,17 @@ public class mpt {
 				option.click();
 				Thread.sleep(6000);	
 				
-				Assert.assertEquals(item.getText(), "3 ITEMS FOUND");
+				sf.assertEquals(item.getText(), "3 ITEMS FOUND");
 				option.click();
 			
 			}
 			else if(i==2)
 			{
-				option.click();
+				
 				Thread.sleep(6000);
-				Assert.assertEquals(item.getText(), "9 ITEMS FOUND");
+				option.click();
+				//Validate.isTrue(item.getText().equalsIgnoreCase("9 ITEMS FOUND"));
+				sf.assertTrue(item.getText().equalsIgnoreCase("9 ITEMS FOUND"), "This is false");
 				option.click();
 				
 			}
@@ -137,7 +139,7 @@ public class mpt {
 			{
 				option.click();
 				Thread.sleep(6000);
-				Assert.assertEquals(item.getText(), "4 ITEMS FOUND");
+				sf.assertEquals(item.getText(), "4 ITEMS FOUND");
 				option.click();
 				
 			}
@@ -145,7 +147,7 @@ public class mpt {
 			{
 				option.click();
 				Thread.sleep(6000);
-				Assert.assertEquals(item.getText(), "1 ITEMS FOUND");
+				sf.assertEquals(item.getText(), "1 ITEMS FOUND");
 				option.click();
 				
 			}
@@ -153,7 +155,7 @@ public class mpt {
 			{
 				option.click();
 				Thread.sleep(6000);
-				Assert.assertEquals(item.getText(), "2 ITEMS FOUND");
+				sf.assertEquals(item.getText(), "2 ITEMS FOUND");
 				option.click();
 			
 			}
@@ -161,10 +163,9 @@ public class mpt {
 			{
 				option.click();
 				Thread.sleep(6000);
-				Assert.assertEquals(item.getText(), "2 ITEMS FOUND");
+				sf.assertEquals(item.getText(), "2 ITEMS FOUND");
 				option.click();
-				driver.navigate().refresh();
-				break;
+				
 				
 			}
 			else if(i==7)
@@ -172,7 +173,7 @@ public class mpt {
 				option.click();
 				Thread.sleep(6000);
 				//driver.navigate().refresh();
-				Assert.assertEquals(item.getText(), "8 ITEMS FOUND");
+				sf.assertEquals(item.getText(), "8 ITEMS FOUND");
 				option.click();
 				
 			}
@@ -180,7 +181,7 @@ public class mpt {
 			{
 				option.click();
 				Thread.sleep(6000);
-				Assert.assertEquals(item.getText(), "24 ITEMS FOUND");
+				sf.assertEquals(item.getText(), "24 ITEMS FOUND");
 				option.click();
 				
 			}
@@ -188,25 +189,25 @@ public class mpt {
 			{
 				option.click();
 				Thread.sleep(6000);
-				Assert.assertEquals(item.getText(), "1 ITEMS FOUND");
+				sf.assertEquals(item.getText(), "1 ITEMS FOUND");
 				option.click();
 				
 			}
 			else if(i==10)
 			{
 				
-				driver.navigate().refresh();
+				
 				Thread.sleep(6000);
 				option.click();
 				Thread.sleep(6000);
-				Assert.assertEquals(item.getText(), "16 ITEMS FOUND");
+				sf.assertEquals(item.getText(), "16 ITEMS FOUND");
 				option.click();
 			}
 			else if(i==11)
 			{
 				option.click();
 				Thread.sleep(6000);
-				Assert.assertEquals(item.getText(), "76 ITEMS FOUND");
+				sf.assertEquals(item.getText(), "76 ITEMS FOUND");
 				option.click();
 				
 			}
@@ -214,7 +215,7 @@ public class mpt {
 			{
 				option.click();
 				Thread.sleep(6000);
-				Assert.assertEquals(item.getText(), "2 ITEMS FOUND");
+				sf.assertEquals(item.getText(), "2 ITEMS FOUND");
 				option.click();
 				
 			}
@@ -224,12 +225,13 @@ public class mpt {
 			{
 				option.click();
 				Thread.sleep(6000);
-				Assert.assertEquals(item.getText(), "1 ITEMS FOUND");
+				sf.assertEquals(item.getText(), "1 ITEMS FOUND");
 				System.out.println("*****************"+item.getText());
 				option.click();
 				
-			
+			System.out.println("***************Last message");
 			}
+			sf.assertAll();
 			
 		}
 		 

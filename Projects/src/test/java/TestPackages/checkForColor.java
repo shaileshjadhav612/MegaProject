@@ -8,9 +8,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.maven.shared.utils.io.FileUtils;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -19,6 +23,27 @@ import org.testng.annotations.Test;
 
 public class checkForColor {
 	
+	
+	
+    public static void takeSnapShot(WebDriver webdriver,String fileWithPath) throws Exception{
+
+        //Convert web driver object to TakeScreenshot
+
+        TakesScreenshot scrShot =((TakesScreenshot)webdriver);
+
+        //Call getScreenshotAs method to create image file
+
+                File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
+
+            //Move image file to new destination
+
+                File DestFile=new File(fileWithPath);
+
+                //Copy file at destination
+
+                FileUtils.copyFile(SrcFile, DestFile);
+
+    }
 	
 	public void SelectBrands(String BrandName) throws InterruptedException
 	{
@@ -102,19 +127,21 @@ public class checkForColor {
 		{
 			
 			Mp.setup();
-			
+	//		FlashObjectWebDriver flashApp = new FlashObjectWebDriver(Mp.driver, "myFlashMovie");
 		Mp.driver.get("http://192.168.101.35/Vinay/job%20tracker%20git/Reality.JobTrackingUtility/jobTrackerUI/#/loginpage");
 		Mp.driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		Mp.driver.findElement(By.xpath("//input [@name='username']")).sendKeys("admin@realitypremedia.com");
 		Mp.driver.findElement(By.xpath("//input [@name='password']")).sendKeys("Pass#123");
 		Mp.driver.findElement(By.xpath("//button[@class='login-btn']")).click();
 		WebDriverWait wait=new WebDriverWait(Mp.driver, 30);
+		takeSnapShot(Mp.driver, "D://screenshot/s.png") ;
 		SelectBrands("Robert Mondavi");
-		
+	     
 		String color = Mp.driver.findElement(By.xpath("(//li[@class='half_width td']//span[contains(@class,'upload_status_orange upload_status_green')])[1]")).getCssValue("background-color");
 		
 		System.out.println("************"+color);
 		Assert.assertEquals(color, getValue("greencolour"));
+		takeSnapShot(Mp.driver, "D://screenshot/s.png") ;
 		System.out.println("*******colour is verified ");Mp.driver.quit();
 		
 		

@@ -35,10 +35,10 @@ public class jobTracker {
 	
 	int size=DesignStatus.size();
 	int count=0;
-	for(int i=0;i<size;i++)
+	for (WebElement Status : DesignStatus) 
 	{
-		WebElement status = DesignStatus.get(i);
-		String statusValue = status.getText();
+		//WebElement status = DesignStatus.get(i);
+		String statusValue = Status.getText();
 		System.out.println("**************"+statusValue);
 		if(statusValue.contains("New"))
 		{
@@ -51,8 +51,33 @@ public class jobTracker {
 		
 	}
 	
-	System.out.println("**New repeated ** "+count +" **number of times");   
-	}	 
+	System.out.println("**New** "+count +" **number of times is available");   
+	}	
+	
+	public void CountRevision()
+	{
+	List<WebElement> DesignStatus = Mp.driver.findElements(By.xpath("//span[contains(@ng-model,'DesignStat')]"));
+	
+	int size=DesignStatus.size();
+	int count=0;
+	for (WebElement Status : DesignStatus) 
+	{
+		//WebElement status = DesignStatus.get(i);
+		String statusValue = Status.getText();
+		System.out.println("**************"+statusValue);
+		if(statusValue.equalsIgnoreCase("Revision"))
+		{
+			
+			count++;
+		}
+		else
+		
+			break;
+		
+	}
+	
+	System.out.println("**Revision** "+count +" **number of times is available");   
+	}	
 	
 	mpt Mp = new mpt();
 	@Test
@@ -101,13 +126,15 @@ public class jobTracker {
 //	Scanner input = new Scanner(System.in);
 //	System.out.println("**************Enter Search Value : ");
 //	String SearchValue = input.nextLine();
+	Mp.driver.navigate().refresh();
 	Thread.sleep(5000);
-	SearchValue("2213232");
+	SearchValue("2232319");
 	Thread.sleep(3000);
 	Mp.driver.findElement(By.xpath("//input[contains(@class,'filter_submit fl')]")).click();
 	Thread.sleep(6000);
 	
-	CountNew();
+	//CountNew();
+	CountRevision();
 
 	
 	

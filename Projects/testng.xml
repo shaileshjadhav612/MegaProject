@@ -6,10 +6,20 @@
       <class name="chromeDemo.ExtetntReportDemo"/>
       <class name="TestPackages.SearchForNoDataFound"/>
       <class name="TestPackages.jobTracker"/>
-      <class name="TestPackages.UITestingClass"/>
+      <class name="TestPackages.StarDesign"/>
+      <class name="TestPackages.StringComputations"/>
       <class name="TestPackages.JavaExamples"/>
       <class name="TestPackages.NewTestClass"/>
       <class name="TestPackages.mpt"/>
+      <class name="TestPackages.SelectClass"/>
+      <class name="TestPackages.Pagination"/>
+      <class name="TestPackages.checkForColor"/>
+      <class name="TestPackages.NewTab"/>
+      <class name="TestPackages.UITestingClass"/>
+      <class name="TestPackages.softAssert"/>
+      <class name="TestPackages.vestor"/>
+      <class name="TestPackages.SamplearrayList"/>
+      <class name="TestPackages.Autosuggestlist"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

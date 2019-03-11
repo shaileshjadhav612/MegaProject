@@ -108,6 +108,7 @@ public class SearchForNoDataFound {
 	{
 		WebElement ErrorMessage = Mp.driver.findElement(By.xpath("//div[@class='noDataFound']"));
 		Assert.assertEquals(ErrorMessage.getText(),getValue("ErrorMessage"));
+	//Assert.assertEquals(ErrorMessage.getText(),"NO DATA FO!!");
 		System.out.println("********************ErrorMessag verified**********"+getValue("ErrorMessage"));
 	}
 	
@@ -165,7 +166,7 @@ public class SearchForNoDataFound {
 	Mp.driver.findElement(By.xpath("//input [@name='password']")).sendKeys("Pass#123");
 	Mp.driver.findElement(By.xpath("//button[@class='login-btn']")).click();
 	WebDriverWait wait=new WebDriverWait(Mp.driver, 30);
-	SelectBrands("Spiderman");
+	SelectBrands("2 GINGERS®");
 	checkErrorMessage();
 	Reporter.log("Erro messaege verified");
 	

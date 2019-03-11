@@ -46,5 +46,15 @@
 	<classpathentry kind="lib" path="C:/Users/shailesh.jadhav/Downloads/jar_files.zip"/>
 	<classpathentry kind="lib" path="C:/Users/shailesh.jadhav/Downloads/selenium-server-standalone-3.141.59.jar"/>
 	<classpathentry kind="lib" path="C:/Users/shailesh.jadhav/Downloads/gherkin-5.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/shailesh.jadhav/Downloads/jsf-extensions-flash.jar"/>
+	<classpathentry kind="lib" path="C:/Users/shailesh.jadhav/Downloads/jsf-extensions-flash.jar.zip"/>
+	<classpathentry kind="lib" path="C:/Users/shailesh.jadhav/Downloads/cucmber jars/flex-ui-selenium-0.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/shailesh.jadhav/Downloads/cucmber jars/flex-ui-selenium-0.1.1.jar.zip"/>
+	<classpathentry kind="lib" path="C:/Users/shailesh.jadhav/Downloads/cucmber jars/jsf-extensions-flash.jar"/>
+	<classpathentry kind="lib" path="C:/Users/shailesh.jadhav/Downloads/cucmber jars/jsf-extensions-flash.jar.zip"/>
+	<classpathentry kind="lib" path="C:/Users/shailesh.jadhav/Downloads/cucmber jars/maven-compiler-plugin-3.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/shailesh.jadhav/Downloads/java-client-7.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/shailesh.jadhav/Downloads/maven-surefire-plugin-2.20-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/shailesh.jadhav/Downloads/maven-surefire-plugin-2.7.1.jar.zip"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

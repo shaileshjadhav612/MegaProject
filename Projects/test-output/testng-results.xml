@@ -1,23 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
-    <line>
-      <![CDATA[clicking on brand name]]>
-    </line>
   </reporter-output>
-  <suite started-at="2019-02-14T12:20:57Z" name="Default suite" finished-at="2019-02-14T12:21:15Z" duration-ms="18048">
+  <suite started-at="2019-03-11T09:10:37Z" name="Default suite" finished-at="2019-03-11T09:10:53Z" duration-ms="16578">
     <groups>
     </groups>
-    <test started-at="2019-02-14T12:20:57Z" name="Default test" finished-at="2019-02-14T12:21:15Z" duration-ms="18048">
-      <class name="TestPackages.checkForColor">
-        <test-method signature="chckColor()[pri:0, instance:TestPackages.checkForColor@3cc1435c]" started-at="2019-02-14T12:20:57Z" name="chckColor" finished-at="2019-02-14T12:21:15Z" duration-ms="18032" status="PASS">
+    <test started-at="2019-03-11T09:10:37Z" name="Default test" finished-at="2019-03-11T09:10:53Z" duration-ms="16578">
+      <class name="TestPackages.Autosuggestlist">
+        <test-method signature="autosuggest()[pri:0, instance:TestPackages.Autosuggestlist@52102734]" started-at="2019-03-11T09:10:37Z" name="autosuggest" finished-at="2019-03-11T09:10:53Z" duration-ms="16563" status="PASS">
           <reporter-output>
-            <line>
-              <![CDATA[clicking on brand name]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- chckColor -->
-      </class> <!-- TestPackages.checkForColor -->
+        </test-method> <!-- autosuggest -->
+      </class> <!-- TestPackages.Autosuggestlist -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
