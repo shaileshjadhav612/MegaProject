@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestPackages.Autosuggestlist">
+      <class name="TestPackages.practice">
         <methods>
-          <include name="autosuggest"/>
+          <include name="practiceTutorial"/>
         </methods>
-      </class> <!-- TestPackages.Autosuggestlist -->
+      </class> <!-- TestPackages.practice -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

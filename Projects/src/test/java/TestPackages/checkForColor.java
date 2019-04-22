@@ -1,5 +1,6 @@
 package TestPackages;
 
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -7,6 +8,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
+
+import javax.imageio.ImageIO;
 
 import org.apache.maven.shared.utils.io.FileUtils;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
@@ -21,10 +24,16 @@ import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
+import com.assertthat.selenium_shutterbug.core.Shutterbug;
+import com.assertthat.selenium_shutterbug.utils.web.ScrollStrategy;
+
+import net.bytebuddy.build.HashCodeAndEqualsPlugin.WithNonNullableFields;
+import ru.yandex.qatools.ashot.AShot;
+
 public class checkForColor {
 	
 	
-	
+	mpt Mp = new mpt();
     public static void takeSnapShot(WebDriver webdriver,String fileWithPath) throws Exception{
 
         //Convert web driver object to TakeScreenshot
@@ -121,12 +130,13 @@ public class checkForColor {
 		return value;
 	}
 	
-		mpt Mp = new mpt();
+
+		
 		@Test
 		public void chckColor() throws Exception
 		{
 			
-			Mp.setup();
+        	Mp.setup();
 	//		FlashObjectWebDriver flashApp = new FlashObjectWebDriver(Mp.driver, "myFlashMovie");
 		Mp.driver.get("http://192.168.101.35/Vinay/job%20tracker%20git/Reality.JobTrackingUtility/jobTrackerUI/#/loginpage");
 		Mp.driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);

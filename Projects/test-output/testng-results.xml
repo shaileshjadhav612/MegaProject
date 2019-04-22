@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-03-11T09:10:37Z" name="Default suite" finished-at="2019-03-11T09:10:53Z" duration-ms="16578">
+  <suite started-at="2019-04-22T10:16:31Z" name="Default suite" finished-at="2019-04-22T10:16:53Z" duration-ms="21955">
     <groups>
     </groups>
-    <test started-at="2019-03-11T09:10:37Z" name="Default test" finished-at="2019-03-11T09:10:53Z" duration-ms="16578">
-      <class name="TestPackages.Autosuggestlist">
-        <test-method signature="autosuggest()[pri:0, instance:TestPackages.Autosuggestlist@52102734]" started-at="2019-03-11T09:10:37Z" name="autosuggest" finished-at="2019-03-11T09:10:53Z" duration-ms="16563" status="PASS">
+    <test started-at="2019-04-22T10:16:31Z" name="Default test" finished-at="2019-04-22T10:16:53Z" duration-ms="21955">
+      <class name="TestPackages.practice">
+        <test-method signature="practiceTutorial()[pri:0, instance:TestPackages.practice@1ba9117e]" started-at="2019-04-22T10:16:31Z" name="practiceTutorial" finished-at="2019-04-22T10:16:53Z" duration-ms="21935" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- autosuggest -->
-      </class> <!-- TestPackages.Autosuggestlist -->
+        </test-method> <!-- practiceTutorial -->
+      </class> <!-- TestPackages.practice -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

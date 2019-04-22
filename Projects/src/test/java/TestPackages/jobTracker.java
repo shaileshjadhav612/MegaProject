@@ -86,14 +86,15 @@ public class jobTracker {
 		
 		Mp.setup();
 		
-	Mp.driver.get("http://192.168.101.35/Vinay/job%20tracker%20git/Reality.JobTrackingUtility/jobTrackerUI/#/loginpage");
+	Mp.driver.get("http://192.168.101.34/AZURE%20Projects/Reality.JobTrackingUtility/jobTrackerUI/#/loginpage");
 	Mp.driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 	Mp.driver.findElement(By.xpath("//input [@name='username']")).sendKeys("admin@realitypremedia.com");
 	Mp.driver.findElement(By.xpath("//input [@name='password']")).sendKeys("Pass#123");
 	Mp.driver.findElement(By.xpath("//button[@class='login-btn']")).click();
 	WebDriverWait wait=new WebDriverWait(Mp.driver, 30);
+
 	
-//	Thread.sleep(6000);
+   Thread.sleep(6000);
 	WebElement element = Mp.driver.findElement(By.xpath("//a[contains(@class,'btn_default fl')]"));
 	//WebElement element =  wait.until(ExpectedConditions.visibilityOf(element));
 			element.click();

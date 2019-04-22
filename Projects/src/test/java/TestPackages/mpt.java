@@ -91,7 +91,7 @@ public class mpt {
 //		WebElement checkbox = driver.findElement(By.xpath("(//ul[contains(@id,'left_filter_genre')]//div//li//input)[1]"));
 //		checkbox.click();
 //	  System.out.println("**********************"+checkbox);
-           sf.assertEquals(itoms, "82 ITEMS FOUND");
+           sf.assertEquals(itoms, "72 ITEMS FOUND");
 		Thread.sleep(3000);
 		
 		List<WebElement> options = driver.findElements(By.xpath("//ul[contains(@id,'left_filter_genre')]//div//li//input[contains(@class,'filters_value')]"));
@@ -109,7 +109,7 @@ public class mpt {
 				option.click();
 				Thread.sleep(6000);
 				System.out.println("***********************"+item.getText());
-				sf.assertEquals(item.getText(), "2 ITEMS FOUND");
+				sf.assertEquals(item.getText(), "1 ITEMS FOUND");
 				option.click();
 		
 			}
