@@ -12,6 +12,7 @@ import java.util.concurrent.TimeUnit;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -169,6 +170,8 @@ public class SearchForNoDataFound {
 	SelectBrands("2 GINGERS®");
 	checkErrorMessage();
 	Reporter.log("Erro messaege verified");
+	JavascriptExecutor js =  (JavascriptExecutor) Mp.driver;
+	js.executeScript("windows.scrollBy(0,1000)", "");
 	
 	
 	Mp.driver.quit();

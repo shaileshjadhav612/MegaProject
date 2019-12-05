@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestPackages.NewTestClass">
+      <class name="TestPackages.ReadExcel">
         <methods>
-          <include name="mymethods"/>
+          <include name="integrationTest"/>
         </methods>
-      </class> <!-- TestPackages.NewTestClass -->
+      </class> <!-- TestPackages.ReadExcel -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

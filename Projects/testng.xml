@@ -1,25 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
+<parameter name= "showdata" value="Shailesh"/>
+<parameter name= "Username" value="Shailesh"/>
   <test thread-count="5" name="Test">
     <classes>
-      <class name="chromeDemo.ExtetntReportDemo"/>
-      <class name="TestPackages.SearchForNoDataFound"/>
-      <class name="TestPackages.jobTracker"/>
-      <class name="TestPackages.StarDesign"/>
-      <class name="TestPackages.StringComputations"/>
-      <class name="TestPackages.JavaExamples"/>
-      <class name="TestPackages.NewTestClass"/>
-      <class name="TestPackages.mpt"/>
-      <class name="TestPackages.SelectClass"/>
-      <class name="TestPackages.Pagination"/>
-      <class name="TestPackages.checkForColor"/>
-      <class name="TestPackages.NewTab"/>
-      <class name="TestPackages.UITestingClass"/>
-      <class name="TestPackages.softAssert"/>
-      <class name="TestPackages.vestor"/>
-      <class name="TestPackages.SamplearrayList"/>
-      <class name="TestPackages.Autosuggestlist"/>
+      <class name="TestPackages.Parameters"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

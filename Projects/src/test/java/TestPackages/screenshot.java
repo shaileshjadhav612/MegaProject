@@ -18,9 +18,10 @@ import org.testng.annotations.Test;
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
 
-public class practice {
+public class screenshot {
 	
 	mpt sj = new mpt();
+	JavascriptExecutor js = (JavascriptExecutor)  sj.driver;
 	
 	public void Takescreenshot(WebDriver driver,String path) throws IOException
 	{
@@ -60,6 +61,8 @@ public class practice {
 			robot.keyRelease(KeyEvent.VK_ENTER);
 			Thread.sleep(6000);
 			Takescreenshot(sj.driver, "D:\\\\scrrenshots\\\\tools5.jpg");
+			js.executeScript("window.scrollBy(0,1000)","");
+		
 		
 		sj.driver.quit();
 	}

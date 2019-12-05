@@ -15,6 +15,7 @@ import org.apache.maven.shared.utils.io.FileUtils;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -26,13 +27,14 @@ import org.testng.annotations.Test;
 
 import com.assertthat.selenium_shutterbug.core.Shutterbug;
 import com.assertthat.selenium_shutterbug.utils.web.ScrollStrategy;
+import com.google.common.base.Verify;
 
 import net.bytebuddy.build.HashCodeAndEqualsPlugin.WithNonNullableFields;
 import ru.yandex.qatools.ashot.AShot;
 
 public class checkForColor {
-	
-	
+	WebDriver driver;
+	JavascriptExecutor js = (JavascriptExecutor) driver;
 	mpt Mp = new mpt();
     public static void takeSnapShot(WebDriver webdriver,String fileWithPath) throws Exception{
 
@@ -130,7 +132,7 @@ public class checkForColor {
 		return value;
 	}
 	
-
+	
 		
 		@Test
 		public void chckColor() throws Exception
@@ -152,6 +154,7 @@ public class checkForColor {
 		System.out.println("************"+color);
 		Assert.assertEquals(color, getValue("greencolour"));
 		takeSnapShot(Mp.driver, "D://screenshot/s.png") ;
+		js.executeScript("window.scrollBy(0,1000)", "");
 		System.out.println("*******colour is verified ");Mp.driver.quit();
 		
 		

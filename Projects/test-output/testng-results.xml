@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-04-22T10:16:31Z" name="Default suite" finished-at="2019-04-22T10:16:53Z" duration-ms="21955">
+  <suite name="Suite" duration-ms="154" started-at="2019-12-04T13:14:58Z" finished-at="2019-12-04T13:14:58Z">
     <groups>
     </groups>
-    <test started-at="2019-04-22T10:16:31Z" name="Default test" finished-at="2019-04-22T10:16:53Z" duration-ms="21955">
-      <class name="TestPackages.practice">
-        <test-method signature="practiceTutorial()[pri:0, instance:TestPackages.practice@1ba9117e]" started-at="2019-04-22T10:16:31Z" name="practiceTutorial" finished-at="2019-04-22T10:16:53Z" duration-ms="21935" status="PASS">
+    <test name="Default test" duration-ms="154" started-at="2019-12-04T13:14:58Z" finished-at="2019-12-04T13:14:58Z">
+      <class name="TestPackages.Iterator">
+        <test-method status="PASS" signature="IteratorExample()[pri:0, instance:TestPackages.Iterator@5f282abb]" name="IteratorExample" duration-ms="134" started-at="2019-12-04T13:14:58Z" finished-at="2019-12-04T13:14:58Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- practiceTutorial -->
-      </class> <!-- TestPackages.practice -->
+        </test-method> <!-- IteratorExample -->
+      </class> <!-- TestPackages.Iterator -->
     </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+  </suite> <!-- Suite -->
 </testng-results>
