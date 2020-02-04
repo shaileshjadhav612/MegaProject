@@ -4,3 +4,4 @@ Feature: MPT
     Given Open the Firefox and launch the application
     When Enter the Username and Password
     And Reset the credential
+    Then close the browser
